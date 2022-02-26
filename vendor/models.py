@@ -1,5 +1,4 @@
-from pyexpat import model
-from unicodedata import name
+
 from django.contrib.auth.models import User
 from django.db import models
 

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
+from telnetlib import LOGOUT
 from decouple import config
 from pathlib import Path
 
@@ -21,12 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
-
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'vendor_admin'
+LOGOUT_REDIRECT_URL = 'frontpage'
+
 
 
 # Application definition
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'vendor',
+    'product'
 ]
 
 MIDDLEWARE = [
