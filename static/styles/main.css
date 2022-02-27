@@ -28,16 +28,14 @@
     border-radius: 0;
 }
 
-/*
-* Product list
-*/
-.product-list-item .box .subtitle{
+/**
+ * Product list item
+ */
+
+.product-list-item .box .subtitle {
     margin-bottom: 0;
 }
 
-.product-list-item .box .price{
-    color: #888
- 
+.product-list-item .box .price {
+    color: #888;
 }
-
-
